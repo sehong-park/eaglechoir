@@ -1,12 +1,5 @@
 source 'https://rubygems.org'
 
-# for Deploying
-gem 'capistrano', '~> 3.1.0'
-gem 'capistrano-bundler', '~> 1.1.2'
-gem 'capistrano-rails', '~> 1.1.1'
-
-# Add this if you're using rbenv
-gem 'capistrano-rbenv', github: "capistrano/rbenv"
 
 # Bundle edge Rails instead: gem 'rails', github: 'rails/rails'
 gem 'rails', '4.2.0'
@@ -37,7 +30,15 @@ gem 'sdoc', '~> 0.4.0', group: :doc
 gem 'unicorn'
 
 # Use Capistrano for deployment
-# gem 'capistrano-rails', group: :development
+group :development do
+    gem 'capistrano'
+    gem 'capistrano-rails'
+    gem 'capistrano-bundler'
+
+    # Add this if you're using rbenv
+    gem 'capistrano-rbenv', github: "capistrano/rbenv"
+
+end
 
 group :development, :test do
   # Call 'byebug' anywhere in the code to stop execution and get a debugger console
