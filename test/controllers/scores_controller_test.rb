@@ -18,7 +18,7 @@ class ScoresControllerTest < ActionController::TestCase
 
   test "should create score" do
     assert_difference('Score.count') do
-      post :create, score: { composer: @score.composer, index: @score.index, title: @score.title }
+      post :create, score: { index: @score.index, title: @score.title }
     end
 
     assert_redirected_to score_path(assigns(:score))
@@ -35,7 +35,7 @@ class ScoresControllerTest < ActionController::TestCase
   end
 
   test "should update score" do
-    patch :update, id: @score, score: { composer: @score.composer, index: @score.index, title: @score.title }
+    patch :update, id: @score, score: { index: @score.index, title: @score.title }
     assert_redirected_to score_path(assigns(:score))
   end
 

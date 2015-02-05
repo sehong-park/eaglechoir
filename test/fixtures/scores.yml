@@ -2,10 +2,8 @@
 
 one:
   title: MyString
-  composer: MyString
-  index: 
+  index: 1
 
 two:
   title: MyString
-  composer: MyString
-  index: 
+  index: 1
