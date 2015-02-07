@@ -6,6 +6,7 @@ gem 'rails', '4.2.0'
 
 # Adding Bootstrap
 gem 'bootstrap-sass'
+gem 'sprockets-rails', :require => 'sprockets/railtie'
 
 # Use postgresql as the database for Active Record
 gem 'pg'
