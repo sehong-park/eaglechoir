@@ -1,10 +1,12 @@
+<% provide(:title, "악보") %>
 <p id="notice"><%= notice %></p>
 
 <h1>Listing Scores</h1>
 
-<table>
+<table class="table table-striped">
   <thead>
     <tr>
+      <th>#</th>
       <th>Title</th>
       <th>Index</th>
       <th colspan="3"></th>
@@ -12,8 +14,9 @@
   </thead>
 
   <tbody>
-    <% @scores.each do |score| %>
+    <% @scores.each_with_index do |score, index| %>
       <tr>
+        <td><%= index %></td>
         <td><%= score.title %></td>
         <td><%= score.index %></td>
         <td><%= link_to 'Show', score %></td>
