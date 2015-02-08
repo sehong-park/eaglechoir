@@ -1,5 +1,6 @@
 class ScoresController < ApplicationController
   before_action :set_score, only: [:show, :edit, :update, :destroy]
+  http_basic_authenticate_with name: "4510", password: "4510", only: [:edit, :update, :destroy]
 
   # GET /scores
   # GET /scores.json
