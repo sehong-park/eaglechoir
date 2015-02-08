@@ -16,7 +16,7 @@
     <% @members.each do |member| %>
       <tr>
         <td><%= member.name %></td>
-        <td><%= member.phone %></td>
+        <td><a href="tel:<%= member.phone %>"><%= member.phone %></a></td>
         <td><%= member.birthday %></td>
         <td><%= link_to 'Edit', edit_member_path(member) %></td>
         <td><%= link_to 'Destroy', member, method: :delete, data: { confirm: 'Are you sure?' } %></td>
