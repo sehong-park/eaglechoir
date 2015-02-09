@@ -19,7 +19,6 @@
         <td><%= index + 1%></td>
         <td><%= hymn.title %></td>
         <td><%= hymn.index %></td>
-        <td><%= link_to 'Show', hymn %></td>
         <td><%= link_to 'Edit', edit_hymn_path(hymn) %></td>
         <td><%= link_to 'Destroy', hymn, method: :delete, data: { confirm: 'Are you sure?' } %></td>
       </tr>
