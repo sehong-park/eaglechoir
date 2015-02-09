@@ -1,10 +1,10 @@
-<%= form_for(@score) do |f| %>
-  <% if @score.errors.any? %>
+<%= form_for(@hymn) do |f| %>
+  <% if @hymn.errors.any? %>
     <div id="error_explanation">
-      <h2><%= pluralize(@score.errors.count, "error") %> prohibited this score from being saved:</h2>
+      <h2><%= pluralize(@hymn.errors.count, "error") %> prohibited this hymn from being saved:</h2>
 
       <ul>
-      <% @score.errors.full_messages.each do |message| %>
+      <% @hymn.errors.full_messages.each do |message| %>
         <li><%= message %></li>
       <% end %>
       </ul>
@@ -17,7 +17,7 @@
   </div>
   <div class="field">
     <%= f.label :index %><br>
-    <%= f.number_field :index %>
+    <%= f.text_field :index %>
   </div>
   <div class="actions">
     <%= f.submit %>

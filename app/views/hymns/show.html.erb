@@ -1,0 +1,14 @@
+<p id="notice"><%= notice %></p>
+
+<p>
+  <strong>Title:</strong>
+  <%= @hymn.title %>
+</p>
+
+<p>
+  <strong>Index:</strong>
+  <%= @hymn.index %>
+</p>
+
+<%= link_to 'Edit', edit_hymn_path(@hymn) %> |
+<%= link_to 'Back', hymns_path %>

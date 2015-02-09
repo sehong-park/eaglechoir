@@ -2,8 +2,8 @@
 
 one:
   title: MyString
-  index: 1
+  index: MyString
 
 two:
   title: MyString
-  index: 1
+  index: MyString

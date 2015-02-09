@@ -1,0 +1,32 @@
+<% provide(:title, '성가') %>
+<p id="notice"><%= notice %></p>
+
+<h1>Listing Hymns</h1>
+
+<table class="table table-striped">
+  <thead>
+    <tr>
+      <th>#</th>
+      <th>Title</th>
+      <th>Index</th>
+      <th colspan="3"></th>
+    </tr>
+  </thead>
+
+  <tbody>
+    <% @hymns.each_with_index do |hymn, index| %>
+      <tr>
+        <td><%= index + 1%></td>
+        <td><%= hymn.title %></td>
+        <td><%= hymn.index %></td>
+        <td><%= link_to 'Show', hymn %></td>
+        <td><%= link_to 'Edit', edit_hymn_path(hymn) %></td>
+        <td><%= link_to 'Destroy', hymn, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+      </tr>
+    <% end %>
+  </tbody>
+</table>
+
+<br>
+
+<%= link_to 'New Hymn', new_hymn_path %>
