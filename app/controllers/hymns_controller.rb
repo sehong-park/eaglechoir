@@ -1,6 +1,6 @@
 class HymnsController < ApplicationController
   before_action :set_hymn, only: [:show, :edit, :update, :destroy]
-  http_basic_authenticate_with name: "4510", password: "4510", only: [:edit, :update, :destroy]
+  http_basic_authenticate_with name: "4510", password: "4510", only: [:new, :edit, :update, :destroy]
 
   # GET /hymns
   # GET /hymns.json
